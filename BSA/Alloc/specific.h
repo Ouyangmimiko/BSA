@@ -10,5 +10,6 @@ struct element{
 struct bsa{
     struct element *rows[BSA_ROWS];      
     int max_index;  
+};
 #endif 
 
