@@ -1,0 +1,4 @@
+As an extension, I implement the core functionality of these functions by using linked lists data structure. The motivation for it is that it has higher space utilization than original version ( 1D dynamic array). So far it seems to be running without any problems.
+This linked list implementation has higher space utilization than the original 1D dynamic array implementation, because when using 1D dynamic array data structure, the space in this row will only be released when all elements in each row are not used. The space usage of each row of the linked list depends on the elements being used in that row.
+However, there may be a performance loss on certain operations (such as random access). Since the nodes of a linked list are not stored continuously, its memory access pattern may be more scattered than that of an array, thus affecting cache efficiency. 
+For BSA, linked lists provide a more space-saving and flexible implementation.
