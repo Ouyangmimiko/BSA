@@ -155,5 +155,18 @@ void bsa_foreach(void (*func)(int *value, int *acc), bsa *b, int *acc) {
     }
 }
 void test(){
-    
+   bsa* tmp = bsa_init();
+   assert(tmp);
+   assert(bsa_maxindex(tmp)==-1);
+   assert(bsa_set(tmp, 1, 7));
+   assert(bsa_maxindex(tmp)==1);
+   assert(bsa_set(tmp, 0, 0));
+   assert(bsa_set(tmp, 1, 15));
+   int* p = bsa_get(tmp, 0);
+   assert(p);
+   assert(*p == 0);
+   p = bsa_get(tmp, 1);
+   assert(p);
+   assert(*p == 15);
+   assert(bsa_free(tmp));
 }
